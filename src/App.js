@@ -31,7 +31,7 @@ class App extends React.Component {
 
             {/* TODO: add a route with a path of '/profile' that renders a `Profile` component */}
 
-            <Route path="/profile">
+            <Route exact path="/profile">
               <Profile/>
             </Route>
 
@@ -44,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withAuth0(App);
