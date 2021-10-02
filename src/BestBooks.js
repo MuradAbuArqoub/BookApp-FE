@@ -76,18 +76,18 @@ class MyFavoriteBooks extends React.Component {
   }
 
 
-  // updateBookForm =  () => {
-  //    this.setState({
-  //     showUpdateModal: true,
-  //     // UpdateBookInfo: bookInfo
-  //   })
-  // }
-  // updateBookFormCloseHandler =  () => {
-  //    this.setState({
-  //     showUpdateModal: false,
+  updateBookForm =  () => {
+     this.setState({
+      showUpdateModal: true,
+      // UpdateBookInfo: bookInfo
+    })
+  }
+  updateBookFormCloseHandler =  () => {
+     this.setState({
+      showUpdateModal: false,
 
-  //   })
-  // }
+    })
+  }
 
   updateBook = async (e) => {
     e.preventDefault();
