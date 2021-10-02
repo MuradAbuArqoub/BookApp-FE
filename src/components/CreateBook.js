@@ -1,21 +1,24 @@
 import React from 'react'
 import { Modal, Form, Button } from 'react-bootstrap/'
 
-class AddBook extends React.Component {
+class CreateBook extends React.Component {
     render() {
         return (
             <div>
                 <Modal show={this.props.show} onHide={this.props.handelClose}>
                     <Modal.Header closeButton >
-                        <Modal.Title>Add Book Modal 📕</Modal.Title>
+                        <Modal.Title>Add Book Modal</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Form onSubmit={this.props.addBook}>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form onSubmit={this.props.createBook}>
+                            <Form.Group className="mb-3">
                                 <Form.Control type="text" name='title' placeholder='Enter Book Name' />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Group className="mb-3" >
                                 <Form.Control type="text" name='description' placeholder='Enter Book description' />
+                            </Form.Group>
+                            <Form.Group className="mb-3" >
+                                <Form.Control type="text" name='status' placeholder='Enter Book status' />
                             </Form.Group>
                             <Button variant="primary" type="submit" value="Add Book">
                                 Submit
@@ -27,4 +30,4 @@ class AddBook extends React.Component {
         )
     }
 }
-export default AddBook
+export default CreateBook
